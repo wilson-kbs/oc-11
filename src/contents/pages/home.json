@@ -1,8 +1,13 @@
 {
-  "title": "List des logement - Kasa",
+  "title": "List des logements",
   "body": {
     "banner": {
       "title": "Chez vous, partout et ailleurs"
+    },
+    "housings": {
+      "cover": {
+        "alt": "Image de la location"
+      }
     }
   }
 }

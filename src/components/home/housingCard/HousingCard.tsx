@@ -1,12 +1,18 @@
 import styles from "./HousingCard.module.scss";
+import content from "src/contents/pages/home.json";
+import type { IHousing } from "src/types/models/HousingApi.ts";
 
 interface HousingCardProps {
   className?: string;
+  housing: IHousing;
 }
 
-function HousingCard({ className }: HousingCardProps) {
+function HousingCard({ className, ...props }: HousingCardProps) {
   return (
-    <div className={`${styles.HousingCard} ${className}`}>HOUSING CARD</div>
+    <article className={`${styles.HousingCard} ${className}`}>
+      <img src={props.housing.cover} alt={content.body.housings.cover.alt} />
+      <h2>{props.housing.title}</h2>
+    </article>
   );
 }
 

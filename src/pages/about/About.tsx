@@ -1,9 +1,17 @@
 import styles from "./About.module.scss";
 import content from "src/contents/pages/about.json";
+
+import { useEffect } from "react";
+
 import Banner from "src/components/common/banner/Banner.tsx";
 import Dropdown from "src/components/common/dropdown/Dropdown.tsx";
+import RoutesService from "src/services/RoutesService.ts";
 
 function About() {
+  useEffect(() => {
+    document.title = RoutesService.getPageTitle(content.title);
+  }, []);
+
   return (
     <div className={styles.About}>
       <Banner />

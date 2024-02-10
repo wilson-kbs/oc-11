@@ -4,6 +4,11 @@
     "dropdown": {
       "description": "Description",
       "equipments": "Équipements"
+    },
+    "host": {
+      "avatar": {
+        "alt": "Avatar de l'hôte"
+      }
     }
   }
 }

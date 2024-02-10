@@ -1,9 +1,12 @@
 import styles from "./Header.module.scss";
-
 import content from "src/contents/layouts/header.json";
+
+import { Link } from "react-router-dom";
+
+import RoutesService from "src/services/RoutesService.ts";
+
 import Navigation from "src/components/layouts/header/navigation/Navigation.tsx";
 import Logo from "src/components/common/logo/Logo.tsx";
-import { Link } from "react-router-dom";
 
 interface HeaderProps {
   className?: string;
@@ -12,7 +15,7 @@ interface HeaderProps {
 function Header({ className }: HeaderProps) {
   return (
     <header className={`${styles.Header} ${className}`}>
-      <Link to="/">
+      <Link to={RoutesService.getHomeRoute()}>
         <Logo />
       </Link>
       <Navigation routes={Object.values(content.navigation)} />

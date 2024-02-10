@@ -1,19 +1,25 @@
 import styles from "./HousingsView.module.scss";
+import type { IHousing } from "src/types/models/HousingApi.ts";
+
+import { Link } from "react-router-dom";
+import RoutesService from "src/services/RoutesService.ts";
+
 import HousingCard from "src/components/home/housingCard/HousingCard.tsx";
+
 interface HousingsViewProps {
   className?: string;
+  housings: IHousing[];
 }
 
-function HousingsView({ className }: HousingsViewProps) {
-  const count = 6;
+function HousingsView({ className, ...props }: HousingsViewProps) {
   return (
     <div className={`${styles.HousingsView} ${className}`}>
       <div className={styles.HousingsView__list}>
-        {Array(count)
-          .fill(0)
-          .map((_, index) => (
-            <HousingCard key={index} />
-          ))}
+        {props.housings.map((housing, index) => (
+          <Link to={RoutesService.getHousingRoute(housing.id)} key={index}>
+            <HousingCard housing={housing} />
+          </Link>
+        ))}
       </div>
     </div>
   );
