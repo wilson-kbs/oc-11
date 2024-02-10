@@ -1,0 +1,13 @@
+{
+  "title": "Not Found",
+  "body": {
+    "title": "404",
+    "message": "Oups! La page que vous demandez n'existe pas.",
+    "links": {
+      "backToHome": {
+        "href": "/",
+        "title": "Retourner sur la page d’accueil"
+      }
+    }
+  }
+}

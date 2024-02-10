@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "home": {
+      "name": "Home",
+      "path": "/"
+    },
+    "about": {
+      "name": "About",
+      "path": "/about"
+    }
+  }
+}

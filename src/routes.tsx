@@ -1,23 +1,23 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 
-import MainLayout from "./layouts/main/MainLayout.tsx";
+import PageWrapper from "./layouts/pageWrapper/PageWrapper.tsx";
 
 import Home from "./pages/home/Home.tsx";
-import House from "./pages/house/House.tsx";
+import Housing from "./pages/housing/Housing.tsx";
 import About from "./pages/about/About.tsx";
-import NotFound from "./pages/not-found/NotFound.tsx";
+import NotFound from "./pages/notFound/NotFound.tsx";
 
 const routes: RouteObject[] = [
   {
-    element: <MainLayout />,
+    element: <PageWrapper />,
     children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-        path: "/house/:houseId",
-        element: <House />,
+        path: "/housing/:housingId",
+        element: <Housing />,
       },
       {
         path: "/about",

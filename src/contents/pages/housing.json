@@ -1,0 +1,9 @@
+{
+  "title": "Logement",
+  "body": {
+    "dropdown": {
+      "description": "Description",
+      "equipments": "Équipements"
+    }
+  }
+}
