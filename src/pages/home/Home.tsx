@@ -11,6 +11,8 @@ import RoutesService from "src/services/RoutesService.ts";
 import Banner from "src/components/common/banner/Banner.tsx";
 import HousingsView from "src/components/home/housingsView/HousingsView.tsx";
 
+import bannerImage from "public/images/banner-home.jpg";
+
 function Home() {
   const housings = useLoaderData() as IHousing[];
 
@@ -20,8 +22,8 @@ function Home() {
 
   return (
     <div className={styles.Home}>
-      <Banner title={content.body.banner.title} />
-      <HousingsView housings={housings} />
+      <Banner title={content.body.banner.title} imageUrl={bannerImage} />
+      <HousingsView className={styles.HousingView} housings={housings} />
     </div>
   );
 }

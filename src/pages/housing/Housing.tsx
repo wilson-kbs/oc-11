@@ -21,7 +21,7 @@ function Housing() {
   }, [housing.title]);
 
   return (
-    <div className={styles.Housing}>
+    <article className={styles.Housing}>
       <Gallery pictures={housing.pictures} />
       <div className={styles.Housing__Content}>
         <div className={styles.Housing__Content_wrapperA}>
@@ -44,7 +44,7 @@ function Housing() {
           ))}
         </Dropdown>
       </div>
-    </div>
+    </article>
   );
 }
 

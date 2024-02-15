@@ -10,7 +10,7 @@ interface FooterProps {
 function Footer({ className }: FooterProps) {
   return (
     <div className={`${styles.Footer} ${className}`}>
-      <Logo />
+      <Logo className={styles.Footer__Logo} theme={"white"} />
       <Copyright />
     </div>
   );

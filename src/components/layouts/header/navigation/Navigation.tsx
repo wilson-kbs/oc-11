@@ -2,7 +2,7 @@ import styles from "./Navigation.module.scss";
 
 import type { INavigationRoute } from "src/types/header/INavigationRoute.ts";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import RoutesService from "src/services/RoutesService.ts";
 
 interface NavigationProps {
@@ -11,13 +11,15 @@ interface NavigationProps {
 }
 
 function Navigation({ className, routes }: NavigationProps) {
+  const location = useLocation();
+  console.log(location);
   return (
     <div className={`${styles.Navigation} ${className}`}>
       {routes.map((route) => (
         <Link
           key={route.name}
           to={RoutesService.getRoute(route.id)}
-          className={styles.Navigation__link}
+          className={`${styles.Navigation__link} ${RoutesService.getRoute(route.id) === location.pathname ? styles.Navigation__link_active : ""}`}
         >
           {route.name}
         </Link>
