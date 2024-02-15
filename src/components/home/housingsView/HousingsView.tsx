@@ -1,5 +1,5 @@
 import styles from "./HousingsView.module.scss";
-import type { IHousing } from "src/types/models/HousingApi.ts";
+import type { IHousing } from "src/types/models/IHousing.ts";
 
 import { Link } from "react-router-dom";
 import RoutesService from "src/services/RoutesService.ts";

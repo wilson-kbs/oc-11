@@ -1,6 +1,6 @@
 import styles from "./HousingCard.module.scss";
 import content from "src/contents/pages/home.json";
-import type { IHousing } from "src/types/models/HousingApi.ts";
+import type { IHousing } from "src/types/models/IHousing.ts";
 
 interface HousingCardProps {
   className?: string;

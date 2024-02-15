@@ -1,4 +1,4 @@
-import type { IHousing } from "src/types/models/HousingApi.ts";
+import type { IHousing } from "src/types/models/IHousing.ts";
 
 type FakeData = {
   housings: IHousing[];

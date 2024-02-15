@@ -1,7 +1,7 @@
 import styles from "./Home.module.scss";
 import content from "src/contents/pages/home.json";
 
-import type { IHousing } from "src/types/models/HousingApi.ts";
+import type { IHousing } from "src/types/models/IHousing.ts";
 
 import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
