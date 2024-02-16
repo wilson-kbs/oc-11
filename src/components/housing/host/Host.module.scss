@@ -1,3 +1,16 @@
-.Host {}
+.Host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+}
 
-.Host__Name {}
+.Host__Name {
+  color: #FF6060;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 1.8rem;
+  font-weight: 500;
+}

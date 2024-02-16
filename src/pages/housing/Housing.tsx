@@ -12,6 +12,7 @@ import Gallery from "src/components/housing/gallery/Gallery.tsx";
 import Rating from "src/components/housing/rating/Rating.tsx";
 import Dropdown from "src/components/common/dropdown/Dropdown.tsx";
 import Host from "src/components/housing/host/Host.tsx";
+import Tag from "src/components/housing/tag/Tag.tsx";
 
 function Housing() {
   const housing = useLoaderData() as IHousing;
@@ -25,13 +26,17 @@ function Housing() {
       <Gallery pictures={housing.pictures} />
       <div className={styles.Housing__Content}>
         <div className={styles.Housing__Content_wrapperA}>
-          <div className={styles.Housing__title}>{housing.title}</div>
-          <div className={styles.Housing__location}>{housing.location}</div>
-          <div className={styles.Housing__tags}>{housing.tags}</div>
+          <h1 className={styles.Housing__title}>{housing.title}</h1>
+          <p className={styles.Housing__location}>{housing.location}</p>
+          <div className={styles.Housing__tags}>
+            {housing.tags.map((tag) => (
+              <Tag content={tag} />
+            ))}
+          </div>
         </div>
         <div className={styles.Housing__Content_wrapperB}>
-          <Host host={housing.host} />
-          <Rating rating={housing.rating} />
+          <Host className={styles.Housing__host} host={housing.host} />
+          <Rating className={styles.Housing__rating} rating={housing.rating} />
         </div>
       </div>
       <div className={styles.Housing__info}>

@@ -9,7 +9,11 @@ interface AvatarProps {
 function Avatar({ className, ...props }: AvatarProps) {
   return (
     <div className={`${styles.Avatar} ${className}`}>
-      <img src={props.url} alt={content.body.host.avatar.alt} />
+      <img
+        className={styles.Avatar__img}
+        src={props.url}
+        alt={content.body.host.avatar.alt}
+      />
     </div>
   );
 }

@@ -1,4 +1,6 @@
 import styles from "./Rating.module.scss";
+import starSvg from "public/images/icons/star.svg";
+import starActiveSvg from "public/images/icons/star-active.svg";
 
 interface RatingProps {
   className?: string;
@@ -6,7 +8,19 @@ interface RatingProps {
 }
 
 function Rating({ className, ...props }: RatingProps) {
-  return <div className={`${styles.Rating} ${className}`}>{props.rating}</div>;
+  const ratingDisplay = Array.from({ length: 5 }, (_, index) => {
+    return index < Number(props.rating);
+  });
+  return (
+    <div className={`${styles.Rating} ${className}`}>
+      {ratingDisplay.map((active) => (
+        <img
+          className={`${styles.Rating__icon} ${active ? styles.Rating__icon_active : ""}`}
+          src={active ? starActiveSvg : starSvg}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Rating;

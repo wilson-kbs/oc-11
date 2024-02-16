@@ -10,7 +10,11 @@ interface HostProps {
 function Host({ className, ...props }: HostProps) {
   return (
     <div className={`${styles.Host} ${className}`}>
-      <div className={styles.Host__Name}>{props.host.name}</div>
+      <div className={styles.Host__Name}>
+        {props.host.name.split(" ").map((name) => (
+          <span key={name}>{name}</span>
+        ))}
+      </div>
       <Avatar url={props.host.picture} />
     </div>
   );

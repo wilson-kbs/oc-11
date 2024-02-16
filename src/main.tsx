@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes.tsx";
-import "normalize.css";
+import "reset-css/reset.css";
 import "src/styles/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

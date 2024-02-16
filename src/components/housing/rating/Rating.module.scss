@@ -1,1 +1,10 @@
-.Rating {}
+.Rating {
+  display: flex;
+  gap: 10px;
+}
+
+.Rating__icon {}
+
+.Rating__icon_active {
+
+}
