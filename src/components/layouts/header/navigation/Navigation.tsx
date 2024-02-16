@@ -12,7 +12,7 @@ interface NavigationProps {
 
 function Navigation({ className, routes }: NavigationProps) {
   const location = useLocation();
-  console.log(location);
+
   return (
     <div className={`${styles.Navigation} ${className}`}>
       {routes.map((route) => (
