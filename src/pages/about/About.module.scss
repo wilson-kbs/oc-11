@@ -1,1 +1,17 @@
-.About {}
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.About_content {
+  display: flex;
+  max-width: 1240px - 200px;
+  margin: 20px auto 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}

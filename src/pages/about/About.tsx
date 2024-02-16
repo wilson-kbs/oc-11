@@ -1,5 +1,6 @@
 import styles from "./About.module.scss";
 import content from "src/contents/pages/about.json";
+import bannerImage from "public/images/banner-about.jpg";
 
 import { useEffect } from "react";
 
@@ -14,8 +15,8 @@ function About() {
 
   return (
     <div className={styles.About}>
-      <Banner />
-      <div className={styles.AboutContent}>
+      <Banner imageUrl={bannerImage} opacity={0.3} shadow={false} />
+      <div className={styles.About_content}>
         <Dropdown title={content.body.dropdowns.reliability.title}>
           {content.body.dropdowns.reliability.content}
         </Dropdown>

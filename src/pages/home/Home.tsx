@@ -22,7 +22,11 @@ function Home() {
 
   return (
     <div className={styles.Home}>
-      <Banner title={content.body.banner.title} imageUrl={bannerImage} />
+      <Banner
+        title={content.body.banner.title}
+        imageUrl={bannerImage}
+        opacity={0.6}
+      />
       <HousingsView className={styles.HousingView} housings={housings} />
     </div>
   );
