@@ -23,11 +23,12 @@ function Home() {
   return (
     <div className={styles.Home}>
       <Banner
+        className={styles.Home__Banner}
         title={content.body.banner.title}
         imageUrl={bannerImage}
         opacity={0.6}
       />
-      <HousingsView className={styles.HousingView} housings={housings} />
+      <HousingsView className={styles.Home__HousingView} housings={housings} />
     </div>
   );
 }

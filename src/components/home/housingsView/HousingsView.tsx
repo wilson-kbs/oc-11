@@ -10,7 +10,7 @@ interface HousingsViewProps {
 
 function HousingsView({ className, ...props }: HousingsViewProps) {
   return (
-    <div className={`${styles.HousingsView} ${className}`}>
+    <div className={`${className} ${styles.HousingsView}`}>
       <div className={styles.HousingsView__list}>
         {props.housings.map((housing, index) => (
           <HousingCard

@@ -1,33 +1,60 @@
+@import "src/styles";
+
 .NotFound {
   display: flex;
   height: 100%;
   flex-direction: column;
   align-items: center;
   gap: 8rem;
+  justify-content: space-around;
 }
 
-.NotFound__Header {}
+.NotFound__Header {
+}
 
-.NotFound__Main {}
+.NotFound__Main {
+}
 
-.NotFound__Footer {}
+.NotFound__Footer {
+}
 
 .NotFound__title {
   font-size: 28.8rem;
   font-weight: bold;
   color: #FF6060;
+
+  @include breakpoint("medium") {
+    font-size: 21.6rem;
+  }
+
+  @include breakpoint("small") {
+    font-size: 12rem;
+  }
 }
 
 .NotFound__message {
   font-size: 3.6rem;
   font-weight: 500;
   color: #FF6060;
+  text-align: center;
+
+  @include breakpoint("medium") {
+    font-size: 2.7rem;
+  }
+
+  @include breakpoint("small") {
+    font-size: 2rem;
+  }
 }
 
 .NotFound__link {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #000;
-    text-decoration: underline;
-    cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+
+  @include breakpoint("medium") {
+    font-size: 1.4rem;
+  }
 }

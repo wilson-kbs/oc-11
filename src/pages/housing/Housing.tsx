@@ -30,7 +30,11 @@ function Housing() {
           <p className={styles.Housing__location}>{housing.location}</p>
           <div className={styles.Housing__tags}>
             {housing.tags.map((tag) => (
-              <Tag key={tag} content={tag} />
+              <Tag
+                key={tag}
+                className={styles.Housing__tags_item}
+                content={tag}
+              />
             ))}
           </div>
         </div>

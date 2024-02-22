@@ -1,6 +1,35 @@
-.Home {}
+@import "src/styles";
 
-.HousingView {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.Home {
+}
+
+.Home__Banner {
+  @include breakpoint("medium") {
+    height: 20rem !important;
+    p {
+      font-size: 3.3rem !important;
+    }
+  }
+
+  @include breakpoint("small") {
+    height: 12rem !important;
+    padding: 0 3rem;
+    justify-content: flex-start!important;
+    box-shadow: none!important;
+
+    p {
+      font-size: 3rem !important;
+      text-align: left;
+    }
+  }
+}
+
+.Home__HousingView {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @include breakpoint("medium") {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }

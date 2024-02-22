@@ -1,7 +1,6 @@
 import styles from "./Logo.module.scss";
 import logoSrc from "public/images/logo.svg";
 import logoWhiteSrc from "public/images/logo-white.svg";
-import { useMemo } from "react";
 
 const logoMap = {
   default: logoSrc,
@@ -14,11 +13,12 @@ interface LogoProps {
 }
 
 function Logo({ className, theme = "default" }: LogoProps) {
-  const logo = useMemo(() => {
-    return logoMap[theme] || logoMap.default;
-  }, [theme]);
   return (
-    <img className={`${styles.Logo} ${className}`} src={logo} alt="Logo" />
+    <img
+      className={`${styles.Logo} ${className}`}
+      src={logoMap[theme] || logoMap.default}
+      alt="Logo"
+    />
   );
 }
 

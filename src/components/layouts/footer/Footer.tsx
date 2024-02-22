@@ -10,8 +10,10 @@ interface FooterProps {
 function Footer({ className }: FooterProps) {
   return (
     <div className={`${styles.Footer} ${className}`}>
-      <Logo className={styles.Footer__Logo} theme={"white"} />
-      <Copyright />
+      <div className={styles.Footer__wrapper}>
+        <Logo className={styles.Footer__Logo} theme={"white"} />
+        <Copyright className={styles.Footer__Copyright} />
+      </div>
     </div>
   );
 }

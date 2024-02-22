@@ -1,15 +1,36 @@
+@import "src/styles";
+
 .HousingsView {
-  background-color: #F6F6F6;
-  padding: 50px;
+  background-color: #f6f6f6;
+  padding: 5rem;
   border-radius: 10px;
+
+  @include breakpoint("small") {
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .HousingsView__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 60px;
+  gap: 5rem 6rem;
+
+  @include breakpoint("large") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint("small") {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .HousingsView__item {
   height: 100%;
+  aspect-ratio: 1 / 1;
+
+  @include breakpoint("small") {
+    aspect-ratio: 10/7;
+  }
 }

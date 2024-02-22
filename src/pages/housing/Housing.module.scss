@@ -1,3 +1,5 @@
+@import "src/styles";
+
 .Housing {
   width: 100%;
 }
@@ -5,9 +7,14 @@
 .Housing__Content {
   width: 100%;
   height: 100%;
-  padding: 30px 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint("medium") {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .Housing__Content_wrapperA {
@@ -20,15 +27,25 @@
 .Housing__Content_wrapperB {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include breakpoint("medium") {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 .Housing__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 75px;
+  gap: 7.5rem;
+
+  @include breakpoint("medium") {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .Housing__title {
@@ -36,6 +53,10 @@
   color: #FF6060;
   font-weight: 500;
   line-height: 1;
+
+  @include breakpoint("medium") {
+    font-size: 2.7rem;
+  }
 }
 
 .Housing__location {
@@ -45,9 +66,15 @@
 
 .Housing__tags {
   display: flex;
-  flex-wrap: nowrap;
-  margin-top: 10px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
   gap: 10px;
+}
+
+.Housing__tags_item {
+  @include breakpoint("medium") {
+    font-size: 1rem;
+  }
 }
 
 .Housing__host {

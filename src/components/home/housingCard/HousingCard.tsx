@@ -21,6 +21,7 @@ function HousingCard({ className, ...props }: HousingCardProps) {
           src={props.housing.cover}
           alt={content.body.housings.cover.alt}
         />
+        <div className={styles.HousingCard__mask}></div>
         <h2 className={styles.HousingCard__Title}>{props.housing.title}</h2>
       </article>
     </Link>

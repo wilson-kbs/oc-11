@@ -16,7 +16,7 @@ function Header({ className }: HeaderProps) {
   return (
     <header className={`${styles.Header} ${className}`}>
       <Link to={RoutesService.getHomeRoute()}>
-        <Logo />
+        <Logo className={styles.Header_Logo} />
       </Link>
       <Navigation routes={Object.values(content.navigation)} />
     </header>

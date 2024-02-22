@@ -15,7 +15,12 @@ function About() {
 
   return (
     <div className={styles.About}>
-      <Banner imageUrl={bannerImage} opacity={0.3} shadow={false} />
+      <Banner
+        className={styles.About__Banner}
+        imageUrl={bannerImage}
+        opacity={0.3}
+        shadow={false}
+      />
       <div className={styles.About_content}>
         <Dropdown title={content.body.dropdowns.reliability.title}>
           {content.body.dropdowns.reliability.content}

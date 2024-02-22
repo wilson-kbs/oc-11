@@ -5,7 +5,7 @@ interface TagProps {
 }
 
 function Tag({ className, ...props }: TagProps) {
-  return <div className={`${styles.Tag} ${className}`}>{props.content}</div>;
+  return <div className={`${className} ${styles.Tag}`}>{props.content}</div>;
 }
 
 export default Tag;
